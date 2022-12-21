@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Sign In</title>
+  </head>
+
+  <body>
+    <nav>
+      <p id="logo">Team Awesome</p>
+      <p>Don't have an account? <a href="register.html">Create account</a></p>
+    </nav>
+
+    <main>
+      <h1>Sign into your account</h1>
+      <form class="">
+        <div class="form-control">
+          <label for="Email">Email</label>
+          <input type="email" name="Email" value="" id="Email" />
+        </div>
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" name="password" value="" id="Password" />
+        </div>
+
+        <button
+          id="fullbuttonwidth"
+          class="btn btn-black"
+          type="button"
+          name="button"
+          onclick="SignIn()"
+        >
+          login
+        </button>
+      </form>
+    </main>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
