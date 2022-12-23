@@ -37,23 +37,33 @@
     <div class="row">
       <div class="col-6">
         
-        <p id="view">Register a new student account</p>
+        <p id="view">Register a new student or examiner account</p>
         <form class="">
           <div class="form-control">
-            <label for="Email">Matric Number</label>
-            <input type="email" name="Email" value="" id="Email" />
+            <label for="Email">Matric Number/ID No</label>
+            <input type="text" name="ID" value="" id="ID" />
+          </div>
+          <div class="form-control">
+            <label for="password">Full Name</label>
+            <input type="text" name="FullName" value="" id="FullName" />
           </div>
   
           <div class="form-control">
             <label for="password">Password</label>
             <input type="password" name="password" value="" id="Password" />
           </div>
+
+          <div class="form-control">
+            <label for="accType">Account type</label>
+            <input type="text" name="accType" value="" id="AccType" />
+          </div>
   
           <button
+          type="button"
             id="fullbuttonwidth"
             class="btn btn-black"
             name="button"
-            onclick="SignIn()"
+            onclick="createAcc()"
           >
             Register
           </button>
@@ -63,30 +73,39 @@
       </div>
       
 
-  <!--create admin account-->
-  <div class="col-6">
+  <!--create examiner account-->
+  <!-- <div class="col-6">
     <p id="view">Register a new examiner account</p>
     <form class="">
       <div class="form-control">
-        <label for="Email">Username</label>
-        <input type="email" name="Email" value="" id="Email" />
+        <label for="Email">ID Number</label>
+        <input type="text" name="ID" value="" id="ID" />
       </div>
 
       <div class="form-control">
+        <label for="FName">Full Name</label>
+        <input type="text" name="FullName" value="" id="FullName" />
+      </div>
+      <div class="form-control">
         <label for="password">Password</label>
         <input type="password" name="password" value="" id="Password" />
+      </div>
+
+      <div class="form-control">
+          
+        <input type="hidden" name="accType" value="EXAMINER" id="accType" />
       </div>
 
       <button
         id="fullbuttonwidth"
         class="btn btn-black"
         name="button"
-        onclick="SignIn()"
+        onclick="createAcc()"
       >
         Register
       </button>
     </form>
-  </div>
+  </div> -->
 
 <!-- 
       <div class="col-6">
@@ -112,6 +131,7 @@
   <script src="./script/script.js"></script>
   <script src="./script/supervisor.js"></script>
   <script>
+    //createAcc();
     // auth();
     // get_profile();
     // get_semesters();
