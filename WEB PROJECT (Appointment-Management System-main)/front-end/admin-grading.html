@@ -6,20 +6,20 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
   <link rel="stylesheet" href="css/new_meeting.css" />
-  <title>Supervisor new meeting</title>
+  <title>Grading</title>
 </head>
 
 <body>
   <aside>
     <p id="logo">Team Awesome</p>
     <p>
-      <a href="supervisor-meetings.html" class="btn btn-db text-left">Meeting</a>
+      <a href="admin-accounts.html" class="btn btn-db text-left">Create Accounts</a>
     </p>
     <p>
-      <a href="supervisor-new-meeting.html" class="btn btn-black text-left">New meeting</a>
+      <a href="admin-grading.html" class="btn btn-black text-left">Grading Scale</a>
     </p>
     <p>
-      <a href="supervisor-history.html" class="btn btn-db text-left">History</a>
+      <a href="admin-submissions.html" class="btn btn-db text-left">Submissions</a>
     </p>
 
     <p id="Logout">
@@ -34,21 +34,21 @@
       <p id="display_name"></p>
     </nav>
 
-    <h1 id="greeting"></h1>
-    <p class="view">Set new meetings</p>
+    <h1 id="greeting"> Create Grading Scale</h1>
+    
 
     <form>
       <section>
-        <div class="form-control w-75">
+        <!-- <div class="form-control w-75">
           <label for="meeting_id">Choose semester </label>
           <select id="semesterSelector">
-            <!-- <option value="null">--Select semester--</option>
+            <option value="null">--Select semester--</option>
               <option value="1">1st semester(2019/2020)</option>
-              <option value="2">2nd semester(2019/2020)</option> -->
+              <option value="2">2nd semester(2019/2020)</option> 
           </select>
-        </div>
+        </div> -->
 
-        <div class="form-control w-75">
+        <!-- <div class="form-control w-75">
           <label for="meeting_id">Meeting Name</label>
           <input type="text" id="meeting_name" name="" value="" />
         </div>
@@ -56,15 +56,54 @@
         <div class="form-control">
           <label for="num_of_students">Number of Students</label>
           <input id="num_of_students" type="number" name="student_no" min="1" />
-        </div>
+        </div> -->
 
+        <div class="row">
+          <div class="col-6">
+               <!-- abstract -->
         <div class="form-control-range w-75">
-          <label for="input1">Time Span</label>
-          <input id="input1" type="time" /> <span> - </span>
-          <input id="input2" type="time" />
+          <label style="color: black;">Abstract</label>
+          score<span> - </span>
+          <input id="input2" type="text" />
         </div>
 
-        <div class="form-control w-50">
+        <!-- literature review -->
+        <div class="form-control-range w-75">
+          <label style="color: black;">Literature Review</label>
+          score<span> - </span>
+          <input id="input2" type="text" />
+        </div>
+          </div>
+
+          <div class="col-6">
+            
+        <!-- methodology -->
+        <div class="form-control-range w-75">
+          <label style="color: black;">Methodology</label>
+          score<span> - </span>
+          <input id="input2" type="text" />
+        </div>
+
+        <!-- analysis -->
+        <div class="form-control-range w-75">
+          <label style="color: black;">Analysis</label>
+          score<span> - </span>
+          <input id="input2" type="text" />
+        </div>
+
+        <!-- conclusion -->
+        <div class="form-control-range w-75">
+          <label style="color: black;">Conclusion</label>
+          score<span> - </span>
+          <input id="input2" type="text" />
+        </div>
+          </div>
+         
+
+        </div>
+        
+
+        <!-- <div class="form-control w-50">
           <label for="day">Day of the week</label>
           <select id="daySelector">
             <option value="null">--Select Day--</option>
@@ -74,27 +113,27 @@
             <option value="thursday">Thursday</option>
             <option value="friday">Friday</option>
           </select>
-        </div>
+        </div> -->
 
         <button class="btn btn-red" type="button" name="button" onclick="create_schedule()">
-          Schedule meeting
+          Asssign grades
         </button>
       </section>
-      <aside>
+      <!-- <aside>
         <div class="form-control">
           <label for="message">Add a message (optional)</label>
           <textarea rows="20" cols="20" id="message"></textarea>
         </div>
-      </aside>
+      </aside> -->
     </form>
   </main>
 
   <script src="./script/script.js"></script>
   <script src="./script/supervisor.js"></script>
   <script>
-    auth();
-    get_profile();
-    get_semesters();
+    // auth();
+    // get_profile();
+    // get_semesters();
   </script>
 </body>
 

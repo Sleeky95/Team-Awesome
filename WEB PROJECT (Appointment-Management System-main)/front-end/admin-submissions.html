@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
+  <title>Submissions</title>
+</head>
+
+<body>
+  <aside>
+    <p id="logo">Team Awesome</p>
+    <p>
+      <a href="admin-accounts.html" id="fullbuttonwidth" class="btn btn-db text-left">Create Accounts</a>
+    </p>
+    <p>
+      <a href="admin-grading.html" id="fullbuttonwidth" class="btn btn-db text-left">Grading
+      </a>
+    </p>
+    <p>
+      <a href="admin-submissions.html" id="fullbuttonwidth" class="btn btn-black text-left">Submissions</a>
+    </p>
+
+    <p id="Logout">
+      <button id="fullbuttonwidth" class="btn btn-black" ype="button" name="button" onclick="logout()">
+        Log Out
+      </button>
+    </p>
+  </aside>
+
+  <main>
+    <nav>
+      <p id="display_name"></p>
+    </nav>
+
+    <div class="row">
+      <div class="col-6">
+        <h1>View and assign projects to examiners</h1>
+       
+      </div>
+    </div>
+
+    <div class="">
+      <table style="width: 50%">
+        <tr>
+          <th class="view">Projects</th>
+          <th class="view">Examiners</th>
+        </tr>
+
+        <tr>
+          <td>Waste Management Sustainability in Sub Saharan Africa</td>
+          <td id="space">
+            <!-- <div class="col-6"> -->
+              <div class="FilterSemester">
+                <label for="Filter">Select Examiner(s)</label>
+                <select multiple id="semesterSelector" onchange="get_schedules()">
+                  <option value="null">--Select examiner--</option>
+                  <option value="null">Dr Sehu</option>
+                  <option value="null">Dr Abolarin</option>
+                </select>
+              </div>
+            <!-- </div> -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>The positive and negative impacts of the internet on academics</td>
+          <td id="space">
+           <div class="FilterSemester">
+            <label for="Filter">Select Examiner(s)</label>
+            <select multiple id="semesterSelector" onchange="get_schedules()">
+              <option value="null">--Select examiner--</option>
+              <option value="null">Dr Sehu</option>
+              <option value="null">Dr Abolarin</option>
+            </select>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Writing clean code in JavaScript</td>
+          <td>
+            <div class="FilterSemester">
+            <label for="Filter">Select Examiner(s)</label>
+            <select multiple id="semesterSelector" onchange="get_schedules()">
+              <option value="null">--Select examiner--</option>
+              <option value="null">Dr Sehu</option>
+              <option value="null">Dr Abolarin</option>
+            </select>
+          </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+
+  <script src="./script/script.js"></script>
+  <script>
+    // auth();
+    // get_profile();
+  </script>
+</body>
+
+</html>
