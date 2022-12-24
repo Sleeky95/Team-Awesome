@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Sign In</title>
+  </head>
+
+  <body>
+    <nav>
+      <p id="logo">Team Awesome</p>
+      <p>Don't have an Admin account? <a href="register.html">Create one</a></p>
+    </nav>
+
+    <main>
+      <div class="row">
+        <div class="col-6">
+          <h1>Sign into your <span style="color: cornflowerblue;">admin</span>  account</h1>
+      <form class="">
+        <div class="form-control">
+          <label for="Email">Id No</label>
+          <input type="text" name="Email" value="" id="aID" />
+        </div>
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" name="password" value="" id="aPassword" />
+        </div>
+
+        <button
+        type="button"
+      
+          class="btn btn-black fullbuttonwidth"
+          name="button"
+          onclick="adminSignIn()"
+        >
+       
+          Sign in
+        </button>
+      </form>
+
+        </div>
+
+        <!--examiner -->
+        <div class="col-6">
+          <h1>Sign into your <span style="color: burlywood;">Examiner</span>  account</h1>
+      <form class="">
+        <div class="form-control">
+          <label for="Email">Id No</label>
+          <input type="text" name="Email" value="" id="eID" />
+        </div>
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" name="password" value="" id="ePassword" />
+        </div>
+
+        <button
+        type="button"
+        
+          class="btn btn-black fullbuttonwidth"
+          name="button"
+          onclick="examinerSignIn()"
+        >
+       
+          Sign in
+        </button>
+      </form>
+
+        </div>
+      <!--student-->
+        <div class="col-6">
+          <h1>Sign into your <span style="color: darkolivegreen;">student</span>  account</h1>
+      <form class="">
+        <div class="form-control">
+          <label for="Email">Matric No</label>
+          <input type="text" name="Email" value="" id="sID" />
+        </div>
+
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="passsword" name="password" value="" id="sPassword" />
+        </div>
+
+        <button
+        type="button"
+        
+          class="btn btn-black fullbuttonwidth"
+          name="button"
+          onclick="studentSignIn()"
+        >
+       
+          Sign in
+        </button>
+      </form>
+        </div>
+      </div>
+      
+    </main>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>

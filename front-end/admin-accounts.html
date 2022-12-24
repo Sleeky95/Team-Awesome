@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
+  <link rel="stylesheet" type="text/css" href="css/register.css" />
+  <title>Admin dashboard</title>
+</head>
+
+<body>
+  <aside>
+    <p id="logo">Team Awesome</p>
+    <p>
+      <a href="admin-accounts.html" id="fullbuttonwidth" class="btn btn-black text-left">Create Accounts</a>
+    </p>
+    <p>
+      <a href="admin-grading.html" id="fullbuttonwidth" class="btn btn-db text-left">Grading scale</a>
+    </p>
+    <p>
+      <a href="admin-submissions.html" id="fullbuttonwidth" class="btn btn-db text-left">Submissions</a>
+    </p>
+
+    <p id="Logout">
+      <button id="fullbuttonwidth" class="btn btn-black" ttype="button" name="button" onclick="logout()">
+        Log Out
+      </button>
+    </p>
+  </aside>
+
+  <main style="margin-left: 10px; margin-right: 12px;">
+    <nav>
+      <p id="display_name"></p>
+    </nav>
+<!--create student account-->
+    <div class="row">
+      <div class="col-6">
+        
+        <p id="view">Register a new student or examiner account</p>
+        <form class="">
+          <div class="form-control">
+            <label for="Email">Matric Number/ID No</label>
+            <input type="text" name="ID" value="" id="ID" />
+          </div>
+          <div class="form-control">
+            <label for="password">Full Name</label>
+            <input type="text" name="FullName" value="" id="FullName" />
+          </div>
+  
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" id="Password" />
+          </div>
+
+          <div class="form-control">
+            <label for="accType">Account type</label>
+            <input type="text" name="accType" value="" id="AccType" />
+          </div>
+  
+          <button
+          type="button"
+            id="fullbuttonwidth"
+            class="btn btn-black"
+            name="button"
+            onclick="createAcc()"
+          >
+            Register
+          </button>
+        </form>
+        <!-- create admin account -->
+       
+      </div>
+      
+
+  <!--create examiner account-->
+  <!-- <div class="col-6">
+    <p id="view">Register a new examiner account</p>
+    <form class="">
+      <div class="form-control">
+        <label for="Email">ID Number</label>
+        <input type="text" name="ID" value="" id="ID" />
+      </div>
+
+      <div class="form-control">
+        <label for="FName">Full Name</label>
+        <input type="text" name="FullName" value="" id="FullName" />
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" name="password" value="" id="Password" />
+      </div>
+
+      <div class="form-control">
+          
+        <input type="hidden" name="accType" value="EXAMINER" id="accType" />
+      </div>
+
+      <button
+        id="fullbuttonwidth"
+        class="btn btn-black"
+        name="button"
+        onclick="createAcc()"
+      >
+        Register
+      </button>
+    </form>
+  </div> -->
+
+<!-- 
+      <div class="col-6">
+        <div class="FilterSemester">
+          <label for="Filter">Filter semester</label>
+          <select id="semesterSelector" onchange="get_schedules(1)">
+            <option value="null">--Select semester--</option>
+          </select>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- <table style="width: 100%" id="supervisor_history">
+      <tr>
+        <th>Meeting Name</th>
+        <th>Reg. Students</th>
+        <th>Time span</th>
+        <th>Day</th>
+        <th>Status</th>
+      </tr>
+    </table> -->
+  </main>
+  <script src="./script/script.js"></script>
+  <script src="./script/supervisor.js"></script>
+  <script>
+    //createAcc();
+    // auth();
+    // get_profile();
+    // get_semesters();
+  </script>
+</body>
+
+</html>
