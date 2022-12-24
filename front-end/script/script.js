@@ -1,5 +1,6 @@
 let xhr = new XMLHttpRequest();
 // xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
 const baseUrl = "https://awesome.coconuthead.dev";
 let Adminautho;
 let examinerautho;
@@ -16,6 +17,7 @@ function Register() {
     }
   }
   const data = JSON.stringify({
+
     identification_no: document.getElementById("ID").value,
     password:document.getElementById("Password").value,
     full_name: document.getElementById("Fullname").value,
@@ -34,6 +36,7 @@ function Register() {
     if (xhr.status == 200) {
       // alert(resp.message);
       window.location.replace("http://127.0.0.1:5500/Signin.html");
+
     } else {
       // handle error
       // get the response from xhr.response
@@ -44,6 +47,7 @@ function Register() {
 }
 
 //sign in
+
 function adminSignIn() {
   const data = JSON.stringify({
     //email: document.getElementById("Email").value,
@@ -125,11 +129,11 @@ function studentSignIn() {
        
       
     } else {
-
       alert("Error: " + resp.message);
     }
   };
 }
+
 
 //create account
 function createAcc() {
@@ -211,6 +215,7 @@ function displayProj() {
   xhr.send();
   
 }
+
 //authentication
 function auth() {
   console.log(sessionStorage.getItem("id"));
@@ -221,14 +226,9 @@ function auth() {
 
 //logout
 function logout() {
+
   xhr.open("POST", `${baseUrl}/signout`);
 
   xhr.send();
   window.location.replace("http://127.0.0.1:5500/Signin.html");
 }
-
-
-
-
-
-

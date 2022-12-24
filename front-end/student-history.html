@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
+  <title>Student history</title>
+</head>
+
+<body>
+  <aside>
+    <p id="logo">Team Awesome</p>
+    <p>
+      <a href="student-meetings.html" id="fullbuttonwidth" class="btn btn-db text-left">Meeting</a>
+    </p>
+    <p>
+      <a href="student-new-meetings.html" id="fullbuttonwidth" class="btn btn-db text-left">New meeting</a>
+    </p>
+    <p>
+      <a href="student-history.html" id="fullbuttonwidth" class="btn btn-black text-left">History</a>
+    </p>
+
+    <p id="Logout">
+      <button id="fullbuttonwidth" class="btn btn-black" type="button" name="button" onclick="logout()">
+        Log Out
+      </button>
+    </p>
+  </aside>
+
+  <main>
+    <nav>
+      <p id="display_name">Mudashiru Toheeb</p>
+    </nav>
+
+    <div class="row">
+      <div class="col-6">
+        <h1 id="greeting"></h1>
+        <p id="view">View previous meetings</p>
+      </div>
+      <div class="col-6">
+        <div class="FilterSemester">
+          <label for="Filter">Filter semester</label>
+          <select id="semesterSelector" onchange="get_schedules(2)">
+            <option value="null">--Select semester--</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <table style="width: 100%" id="student_history">
+      <tr>
+        <th>Meeting Name</th>
+        <th>Supervisor</th>
+        <th>Time span</th>
+        <th>Days</th>
+        <th>Status</th>
+      </tr>
+    </table>
+  </main>
+
+  <script src="./script/script.js"></script>
+  <script src="./script/student.js"></script>
+  <script>
+    auth();
+    get_profile();
+    get_semesters();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
+  <title></title>
+</head>
+
+<body>
+  <aside>
+    <p id="logo">Team Awesome</p>
+    <p>
+      <a href="student-meetings.html" id="fullbuttonwidth" class="btn btn-db text-left">Meeting</a>
+    </p>
+    <p>
+      <a href="student-new-meetings.html" id="fullbuttonwidth" class="btn btn-db text-left">New meeting</a>
+    </p>
+    <p>
+      <a href="student-history.html" id="fullbuttonwidth" class="btn btn-black text-left">History</a>
+    </p>
+
+    <p id="Logout">
+      <button id="fullbuttonwidth" class="btn btn-black" type="button" name="button" onclick="logout()">
+        Log Out
+      </button>
+    </p>
+  </aside>
+
+  <main>
+    <nav>
+      <p id="display_name"></p>
+    </nav>
+
+    <h1 id="greeting"></h1>
+    <p id="view">Messages</p>
+  </main>
+  <script src="./script/script.js"></script>
+  <script>
+    auth();
+    get_profile();
+  </script>
+</body>
+
+</html>

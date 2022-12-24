@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/Student-Meetings.css" />
+  <title>Supervisor schedule attendance</title>
+</head>
+
+<body>
+  <aside>
+    <p id="logo">Team Awesome</p>
+    <p>
+      <a href="supervisor-meetings.html" id="fullbuttonwidth" class="btn btn-db text-left">Meeting</a>
+    </p>
+    <p>
+      <a href="supervisor-new-meeting.html" id="fullbuttonwidth" class="btn btn-db text-left">New meeting</a>
+    </p>
+    <p>
+      <a href="supervisor-history.html" id="fullbuttonwidth" class="btn btn-black text-left">History</a>
+    </p>
+
+    <p id="Logout">
+      <button id="fullbuttonwidth" class="btn btn-black" ype="button" name="button" onclick="logout()">
+        Log Out
+      </button>
+    </p>
+  </aside>
+
+  <main>
+    <nav>
+      <p id="display_name"></p>
+    </nav>
+
+    <div class="row">
+      <div class="col-6">
+        <h1>Meeting ID</h1>
+        <p class="view">Set the attendance</p>
+      </div>
+    </div>
+
+    <div class="">
+      <table style="width: 50%">
+        <tr>
+          <th>Student name</th>
+          <th>Attendance</th>
+        </tr>
+
+        <tr>
+          <td>Jide Plumptre</td>
+          <td id="space">
+            <input id="Type" type="radio" name="type" value="Yes" />
+            <label id="space">Yes</label>
+            <input id="Type" type="radio" name="type" value="No" />
+            <label id="space">No</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Victor Iwanntanaye</td>
+          <td id="space">
+            <input id="Type" type="radio" name="type1" value="Yes" />
+            <label id="space">Yes</label>
+            <input id="Type" type="radio" name="type1" value="No" />
+            <label id="space">No</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Boluwatife Adewusi</td>
+          <td>
+            <input id="Type" type="radio" name="type2" value="Yes" />
+            <label id="space">Yes</label>
+            <input id="Type" type="radio" name="type2" value="No" />
+            <label id="space">No</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+
+  <script src="./script/script.js"></script>
+  <script>
+    auth();
+    get_profile();
+  </script>
+</body>
+
+</html>
