@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:alpine
+    container_name: awesome_db
+    restart: unless-stopped
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+
+
+  app:
+    build: .
+    image: awesome
+    container_name: awesome_api
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8855:8855"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=lms
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+
+volumes:
+  db:
